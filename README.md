@@ -70,3 +70,29 @@ FLUSH PRIVILEGES;
 
 EXIT;
 ```
+
+> Senha para o usuário root
+
+```
+sudo mysql
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
+
+FLUSH PRIVILEGES;
+
+EXIT;
+```
+
+> Verificar status do MySql
+
+```
+sudo service mysql status
+```
+
+> Reiniciar o MySql
+
+```
+sudo /etc/init.d/mysql restart
+```
