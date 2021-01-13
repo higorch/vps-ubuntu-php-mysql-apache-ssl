@@ -1,4 +1,4 @@
-# AWS EC2 ambiente para WordPress e Laravel
+# AWS EC2 ambiente Linux para WordPress e Laravel
 Instancia AWS EC2 para rodar laravel >= 6 e WordPress
 
 Atualizar os pacotes do Ibuntu
@@ -58,3 +58,18 @@ CREATE DATABASE mynewdatabase;
 SHOW DATABASES;
 ```
 
+> Criar usuário para o banco de dados
+
+```
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
+```
+
+> Permissões do usuário
+
+```
+GRANT ALL PRIVILEGES ON mynewdatabase.* TO 'myuser'@'localhost' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+EXIT;
+```
