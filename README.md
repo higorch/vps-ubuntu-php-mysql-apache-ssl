@@ -32,7 +32,7 @@ sudo /etc/init.d/apache2 restart
 ```
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
-sudo apt-get install php7.3
+sudo apt install php7.3
 ```
 
 > Extenções do PHP 
@@ -44,7 +44,7 @@ sudo apt install php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.
 ## Instalação do MySql
 
 ```
-sudo apt-get install mysql-server
+sudo apt install mysql-server
 ```
 
 > Criar novo banco de dados
