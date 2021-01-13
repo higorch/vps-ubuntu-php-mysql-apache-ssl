@@ -85,11 +85,18 @@ FLUSH PRIVILEGES;
 
 EXIT;
 ```
-
 > Verificar status do MySql
 
 ```
 sudo service mysql status
+```
+
+> Acesso remoto ao MySql
+
+```
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+bind-address = 0.0.0.0
 ```
 
 > Reiniciar o MySql
