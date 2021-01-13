@@ -97,3 +97,12 @@ sudo service mysql status
 ```
 sudo /etc/init.d/mysql restart
 ```
+
+## Instalação do CURL
+
+```
+sudo apt-get update
+sudo apt-get install --upgrade libc-bin libc-dev-bin libc6 libc6-dev klibc-utils libklibc
+sudo reboot
+```
+
