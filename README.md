@@ -122,10 +122,11 @@ Usar quando o executar o scp e der *permission denied*
 sudo chown -R ubuntu:ubuntu "caminho para o seu diretório remoto"
 ```
 
-> Executar dentro do projeto Laravel, para mudar grupo de usuário
+> Executar dentro do projeto *Laravel*, para mudar grupo de usuário
 
 ```
 sudo chown -R ubuntu:www-data storage
+sudo chown -R ubuntu:www-data bootstrap
 ```
 
 ## Atualizar arquivos no servidor via SCP
