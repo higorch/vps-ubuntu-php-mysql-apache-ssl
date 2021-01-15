@@ -116,6 +116,7 @@ sudo reboot
 ## Alterar a propriedade do seu diretório remoto para o seu usuário.
 
 Altere a propriedade do seu diretório remoto para o seu usuário. Por exemplo, vou mudar a propriedade de /remote-dir para meu usuário “dev” em vez de “root“.
+Usar quando o executar o scp e der *permission denied*
 
 ```
 sudo chown -R dev:dev "caminho para o seu diretório remoto"
