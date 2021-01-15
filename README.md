@@ -64,9 +64,19 @@ CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 
 > Permissões do usuário
 
-```
-GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION; *permissões direcionadas para um banco*
+*Permissões direcionadas para um banco*
 
+```
+GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+EXIT;
+```
+
+*Permissões direcionadas para todos bancos*
+
+```
 GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION; *permissões direcionadas para todos bancos*
 
 FLUSH PRIVILEGES;
