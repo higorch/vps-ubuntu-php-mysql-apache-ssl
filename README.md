@@ -121,3 +121,8 @@ Altere a propriedade do seu diretório remoto para o seu usuário. Por exemplo, 
 sudo chown -R dev:dev "caminho para o seu diretório remoto"
 ```
 
+## Atualizar arquivos no servidor via SCP
+
+```
+scp -i C:/dir/to/certificate.pem -r C:/dir/to/app/* ubuntu@host-ip.com:/var/www/html/app
+```
