@@ -113,3 +113,11 @@ sudo apt-get install --upgrade libc-bin libc-dev-bin libc6 libc6-dev klibc-utils
 sudo reboot
 ```
 
+## Alterar a propriedade do seu diretório remoto para o seu usuário.
+
+Altere a propriedade do seu diretório remoto para o seu usuário. Por exemplo, vou mudar a propriedade de /remote-dir para meu usuário “dev” em vez de “root“.
+
+```
+sudo chown -R dev:dev "caminho para o seu diretório remoto"
+```
+
