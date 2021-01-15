@@ -134,3 +134,23 @@ sudo chown -R ubuntu:www-data bootstrap
 ```
 scp -i C:/dir/to/certificate.pem -r C:/dir/to/app/* ubuntu@host-ip.com:/var/www/html/app
 ```
+
+## Instalar certificado SSL Letsencrypt
+
+> Baixe e instale o Certbot
+
+```
+sudo apt-get install certbot python-certbot-apache
+```
+
+> Instale o certificado LetsEncrypt e atualize os arquivos de configuração
+
+```
+sudo certbot --apache
+```
+
+> Para renovar o certificado que tem duração de 3 meses
+
+```
+sudo certbot renew
+```
