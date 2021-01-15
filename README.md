@@ -115,11 +115,17 @@ sudo reboot
 
 ## Alterar a propriedade do seu diretório remoto para o seu usuário.
 
-Altere a propriedade do seu diretório remoto para o seu usuário. Por exemplo, vou mudar a propriedade de /remote-dir para meu usuário “dev” em vez de “root“.
+Altere a propriedade do seu diretório remoto para o seu usuário. Por exemplo, vou mudar a propriedade de /remote-dir para meu usuário “ubuntu” em vez de “root“.
 Usar quando o executar o scp e der *permission denied*
 
 ```
-sudo chown -R dev:dev "caminho para o seu diretório remoto"
+sudo chown -R ubuntu:ubuntu "caminho para o seu diretório remoto"
+```
+
+> Executar dentro do projeto Laravel, para mudar grupo de usuário
+
+```
+sudo chown -R ubuntu:www-data storage
 ```
 
 ## Atualizar arquivos no servidor via SCP
