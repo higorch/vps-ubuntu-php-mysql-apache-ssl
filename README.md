@@ -65,7 +65,9 @@ CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 > Permissões do usuário
 
 ```
-GRANT ALL PRIVILEGES ON mynewdatabase.* TO 'myuser'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION; *permissões direcionadas para um banco*
+
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION; *permissões direcionadas para todos bancos*
 
 FLUSH PRIVILEGES;
 
@@ -85,6 +87,13 @@ FLUSH PRIVILEGES;
 
 EXIT;
 ```
+
+> Agora para acessar o usuario root 
+
+```
+mysql -u root -p;
+```
+
 > Verificar status do MySql
 
 ```
