@@ -212,3 +212,7 @@ sudo nano 000-default.conf
     </Directory>
 </VirtualHost>
 ```
+
+## Criar subdominio Wildcard
+
+> Entre na zona para editar o DNS no seu servidor e crie uma entrada do tipo A ***.dominio.com.br** apontando para o IP de destino
