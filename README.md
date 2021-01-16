@@ -173,3 +173,41 @@ sudo certbot --apache
 ```
 sudo certbot renew
 ```
+
+## Criar virtual Host usando apache2
+
+> Apontando domínio ou subdomínio
+
+```
+cd /etc/apache2/sites-available
+
+sudo nano 000-default.conf
+
+<VirtualHost *:80>
+        ServerName www.subdominio.dominio.com.br
+        ServerAlias subdominio.dominio.com.br
+        DocumentRoot /var/www/dir
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        <Directory /var/www/dir
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+> Apontando subdominio wildcard
+
+<VirtualHost *:80>
+        ServerAlias *.dominio.com.br
+        DocumentRoot /var/www/dir
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        <Directory /var/www/dir
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
