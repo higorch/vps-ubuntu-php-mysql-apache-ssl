@@ -165,7 +165,7 @@ sudo apt-get install certbot python-certbot-apache
 > Instale o certificado LetsEncrypt e atualize os arquivos de configuração
 
 ```
-sudo certbot --apache
+sudo certbot
 ```
 
 > Para renovar o certificado que tem duração de 3 meses
