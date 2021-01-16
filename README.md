@@ -199,6 +199,7 @@ sudo nano 000-default.conf
 
 > Apontando subdominio wildcard
 
+```
 <VirtualHost *:80>
         ServerAlias *.dominio.com.br
         DocumentRoot /var/www/dir
