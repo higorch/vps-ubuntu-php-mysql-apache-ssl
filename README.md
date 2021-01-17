@@ -216,3 +216,36 @@ sudo nano 000-default.conf
 ## Criar subdominio Wildcard
 
 > Entre na zona para editar o DNS no seu servidor e crie uma entrada do tipo A ***.dominio.com.br** apontando para o IP de destino
+
+## Instalar o certificado SSL manualmente, pode ser usando para subdominio **Wildcard**
+
+```
+sudo certbot certonly --manual -d *.crm.cosmefar.com.br --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory
+
+// Crie a entrada TXT
+
+Host: _acme-challenge.dominio.com.br
+Conteudo: sera retornado quando o comando for executado
+```
+
+> Criar o arquivo .conf com as configurações
+
+```
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+        ServerAlias *.crm.dominio.com.br
+        DocumentRoot /var/www/dir
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        <Directory /var/www/cdir>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+SSLCertificateFile /etc/letsencrypt/live/crm.dominio.com.br/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/crm.dominio.com.br/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+</VirtualHost>
+</IfModule>
+```
