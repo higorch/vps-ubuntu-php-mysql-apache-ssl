@@ -197,6 +197,21 @@ sudo nano 000-default.conf
 </VirtualHost>
 ```
 
+> Criar arquivo .conf
+
+```
+cd /etc/apache2/sites-available
+
+sudo touch site.com.br.conf
+```
+
+> Abilitar ou desabilitar arquivo .conf
+
+```
+sudo a2ensite site.com.br.conf --> Abilita
+sudo a2dissite site.com.br.conf --> Desabilita
+```
+
 > Apontando subdominio wildcard
 
 ```
