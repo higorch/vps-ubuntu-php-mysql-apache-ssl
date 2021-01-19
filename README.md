@@ -148,6 +148,16 @@ sudo chown -R ubuntu:www-data storage
 sudo chown -R ubuntu:www-data bootstrap
 ```
 
+> Permissoes das pastas bootstrap e storage
+
+```
+sudo chmod -R o+w storage/
+sudo chmod -R 775 storage/
+
+sudo chmod -R o+w bootstrap/
+sudo chmod -R 775 bootstrap/
+```
+
 ## Atualizar arquivos no servidor via SCP
 
 ```
