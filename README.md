@@ -12,7 +12,7 @@ sudo apt-get upgrade
 ## Instalação do apache
 
 ```
-sudo apt apache2
+sudo apt install apache2
 ```
 
 > Abilitar a reinscrita de URL
