@@ -199,11 +199,11 @@ sudo nano 000-default.conf
         DocumentRoot /var/www/dir
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-        <Directory /var/www/dir
-        Options Indexes FollowSymLinks MultiViews
-        AllowOverride All
-        Require all granted
-    </Directory>
+        <Directory /var/www/dir>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Require all granted
+        </Directory>
 </VirtualHost>
 ```
 
@@ -230,11 +230,11 @@ sudo a2dissite site.com.br.conf --> Desabilita
         DocumentRoot /var/www/dir
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-        <Directory /var/www/dir
-        Options Indexes FollowSymLinks MultiViews
-        AllowOverride All
-        Require all granted
-    </Directory>
+        <Directory /var/www/dir>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Require all granted
+        </Directory>
 </VirtualHost>
 ```
 
@@ -262,11 +262,11 @@ Conteudo: sera retornado quando o comando for executado
         DocumentRoot /var/www/dir
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-        <Directory /var/www/cdir>
-        Options Indexes FollowSymLinks MultiViews
-        AllowOverride All
-        Require all granted
-    </Directory>
+        <Directory /var/www/dir>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Require all granted
+        </Directory>
 
 SSLCertificateFile /etc/letsencrypt/live/crm.dominio.com.br/fullchain.pem
 SSLCertificateKeyFile /etc/letsencrypt/live/crm.dominio.com.br/privkey.pem
