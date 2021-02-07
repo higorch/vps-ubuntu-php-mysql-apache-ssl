@@ -21,6 +21,12 @@ sudo apt install apache2
 a2enmod rewrite
 ```
 
+> Abilitar MOD SSL
+
+```
+a2enmod ssl
+```
+
 > Reiniciar o apache
 
 ```
@@ -257,20 +263,22 @@ Conteudo: sera retornado quando o comando for executado
 
 ```
 <IfModule mod_ssl.c>
-<VirtualHost *:443>
-        ServerAlias *.crm.dominio.com.br
-        DocumentRoot /var/www/dir
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-        <Directory /var/www/dir>
-            Options Indexes FollowSymLinks MultiViews
-            AllowOverride All
-            Require all granted
-        </Directory>
+        <VirtualHost *:443>
+                ServerAlias *.crm.dominio.com.br
+                DocumentRoot /var/www/dir
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
+                <Directory /var/www/dir>
+                    Options Indexes FollowSymLinks MultiViews
+                    AllowOverride All
+                    Require all granted
+                </Directory>
 
-SSLCertificateFile /etc/letsencrypt/live/crm.dominio.com.br/fullchain.pem
-SSLCertificateKeyFile /etc/letsencrypt/live/crm.dominio.com.br/privkey.pem
-Include /etc/letsencrypt/options-ssl-apache.conf
-</VirtualHost>
+                SSLEngine on
+
+                SSLCertificateFile /etc/letsencrypt/live/crm.dominio.com.br/fullchain.pem
+                SSLCertificateKeyFile /etc/letsencrypt/live/crm.dominio.com.br/privkey.pem
+
+        </VirtualHost>
 </IfModule>
 ```
