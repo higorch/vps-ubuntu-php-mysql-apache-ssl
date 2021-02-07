@@ -68,6 +68,12 @@ SHOW DATABASES;
 CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 ```
 
+> Remover usuário de banco de dados
+
+```
+DROP USER 'username'@'host';
+```
+
 > Permissões do usuário
 
 *Permissões direcionadas para um banco*
