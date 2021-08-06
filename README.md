@@ -254,10 +254,10 @@ sudo a2dissite site.com.br.conf --> Desabilita
 
 > Entre na zona para editar o DNS no seu servidor e crie uma entrada do tipo A ***.dominio.com.br** apontando para o IP de destino
 
-## Instalar o certificado SSL manualmente, pode ser usando para subdominio **Wildcard**
+## Instalar oo renovar certificado SSL manualmente, pode ser usando para subdominio **Wildcard**
 
 ```
-sudo certbot certonly --manual -d *.dominio.com.br --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory
+sudo certbot certonly --manual --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory -d "*.your-domain" -d your-domain
 
 // Crie a entrada TXT
 
