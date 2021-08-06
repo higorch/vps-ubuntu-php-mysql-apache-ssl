@@ -257,7 +257,7 @@ sudo a2dissite site.com.br.conf --> Desabilita
 ## Instalar o certificado SSL manualmente, pode ser usando para subdominio **Wildcard**
 
 ```
-sudo certbot certonly --manual -d *.crm.cosmefar.com.br --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory
+sudo certbot certonly --manual -d *.dominio.com.br --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory
 
 // Crie a entrada TXT
 
