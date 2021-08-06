@@ -257,7 +257,7 @@ sudo a2dissite site.com.br.conf --> Desabilita
 ## Instalar oo renovar certificado SSL manualmente, pode ser usando para subdominio **Wildcard**
 
 ```
-sudo certbot certonly --manual --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory -d "*.your-domain" -d your-domain
+certbot certonly --manual --preferred-challenges=dns --email admin@your-domain --server https://acme-v02.api.letsencrypt.org/directory --agree-tos --manual-public-ip-logging-ok -d "*.your-domain"
 
 // Crie a entrada TXT
 
