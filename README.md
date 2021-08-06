@@ -181,7 +181,7 @@ scp -i C:/dir/to/certificate.pem -r C:/dir/to/app/* ubuntu@host-ip.com:/var/www/
 > Baixe e instale o Certbot
 
 ```
-sudo apt-get install certbot python-certbot-apache
+apt install certbot python3-certbot-apache
 ```
 
 > Instale o certificado LetsEncrypt e atualize os arquivos de configuração
