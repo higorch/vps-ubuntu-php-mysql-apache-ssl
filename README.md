@@ -261,7 +261,7 @@ sudo certbot certonly --manual --manual-public-ip-logging-ok --preferred-challen
 
 // Crie a entrada TXT
 
-Host: _acme-challenge.dominio.com.br
+Host: _acme-challenge.your-domain
 Conteudo: sera retornado quando o comando for executado
 ```
 
