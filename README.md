@@ -38,13 +38,18 @@ sudo /etc/init.d/apache2 restart
 ```
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
-sudo apt install php7.3
 ```
 
-> Extenções do PHP 
+```
+sudo apt install php7.3 php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd  php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json php7.3-intl
+```
+
+## Instalação do PHP 8
+
+sudo add-apt-repository ppa:ondrej/php
 
 ```
-sudo apt install php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd  php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json php7.3-intl
+sudo apt install php8.0 php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd php8.0-mbstring php8.0-curl php8.0-zip php8.0-cli php8.0-fpm
 ```
 
 ## Instalação do MySql
