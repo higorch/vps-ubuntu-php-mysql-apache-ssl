@@ -69,8 +69,9 @@ sudo mysql
 CREATE DATABASE mynewdatabase;
 SHOW DATABASES;
 ```
+> MySql < 8
 
-> Criar usuário para o banco de dados
+*Criar usuário para o banco de dados*
 
 ```
 CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
@@ -81,8 +82,6 @@ CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 ```
 DROP USER 'username'@'host';
 ```
-
-> Permissões do usuário MySql < 8
 
 *Permissões direcionadas para um banco*
 
@@ -104,12 +103,24 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-> Permissões do usuário MySql > 8
+> MySql > 8
+
+*Criar usuário para o banco de dados*
+
+```
+CREATE USER 'myuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
+```
+
+> Remover usuário de banco de dados
+
+```
+DROP USER 'username'@'host';
+```
 
 *Permissões direcionadas para um banco*
 
 ```
-GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'1.2.3.4' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'localhost';
 
 FLUSH PRIVILEGES;
 
@@ -119,7 +130,7 @@ EXIT;
 *Permissões direcionadas para todos bancos*
 
 ```
-GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' WITH GRANT OPTION; *permissões direcionadas para todos bancos*
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@%'localhost';
 
 FLUSH PRIVILEGES;
 
