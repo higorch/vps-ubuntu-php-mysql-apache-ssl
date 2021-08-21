@@ -1,6 +1,4 @@
-# AWS EC2 ambiente Linux para WordPress e Laravel
-
-### Instancia AWS EC2 para rodar laravel >= 6 e WordPress
+# VPS ambiente Linux para WordPress e Laravel
 
 Atualizar os pacotes do Ibuntu
 
