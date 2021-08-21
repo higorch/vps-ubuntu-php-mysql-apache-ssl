@@ -77,7 +77,7 @@ CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
 DROP USER 'username'@'host';
 ```
 
-> Permissões do usuário
+> Permissões do usuário MySql < 8
 
 *Permissões direcionadas para um banco*
 
@@ -93,6 +93,28 @@ EXIT;
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION; *permissões direcionadas para todos bancos*
+
+FLUSH PRIVILEGES;
+
+EXIT;
+```
+
+> Permissões do usuário MySql > 8
+
+*Permissões direcionadas para um banco*
+
+```
+GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'1.2.3.4' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+EXIT;
+```
+
+*Permissões direcionadas para todos bancos*
+
+```
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' WITH GRANT OPTION; *permissões direcionadas para todos bancos*
 
 FLUSH PRIVILEGES;
 
