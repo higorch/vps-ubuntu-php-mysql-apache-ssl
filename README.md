@@ -1,6 +1,6 @@
 # VPS ambiente Linux para WordPress e Laravel
 
-Atualizar os pacotes do Ibuntu
+Atualizar os pacotes do Ubuntu
 
 ```
 sudo apt-get update
