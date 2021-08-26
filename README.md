@@ -177,6 +177,22 @@ bind-address = 0.0.0.0
 sudo /etc/init.d/mysql restart
 ```
 
+## Instalação do Firewall
+
+#### Seguie a ordem de execução dos comandos
+
+```
+sudo apt-get update
+sudo apt install ufw
+
+sudo ufw status verbose -> Ver regras configuradas
+
+sudo ufw allow ssh -> Abilitar acesso SSH (importante abilitar, se não, não poderá acessar via SSH)
+sudo ufw allow 80 -> Conexão http porta 80
+sudo ufw allow 443 -> Conexão https porta 443
+sudo ufw enable -> Para habilitar o UFW
+```
+
 ## Instalação do CURL
 
 ```
