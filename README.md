@@ -179,7 +179,7 @@ sudo /etc/init.d/mysql restart
 
 ## Instalação do Firewall
 
-#### Seguie a ordem de execução dos comandos
+#### Seguir a ordem de execução dos comandos (abilitar o firewall somente depois de permitir SSH sudo ufw allow ssh)
 
 ```
 sudo apt-get update
