@@ -188,6 +188,8 @@ sudo apt install ufw
 sudo ufw status verbose -> Ver regras configuradas
 
 sudo ufw allow ssh -> Abilitar acesso SSH (importante abilitar, se não, não poderá acessar via SSH)
+sudo ufw default deny incoming -> Configurando as políticas padrão
+udo ufw default allow outgoing -> Configurando as políticas padrão
 sudo ufw allow 80 -> Conexão http porta 80
 sudo ufw allow 443 -> Conexão https porta 443
 sudo ufw enable -> Para habilitar o UFW
