@@ -184,7 +184,7 @@ sudo ufw default deny incoming -> Configurando as políticas padrão
 sudo ufw default allow outgoing -> Configurando as políticas padrão
 sudo ufw allow 80 -> Conexão http porta 80
 sudo ufw allow 443 -> Conexão https porta 443
-ufw allow 3306 -> Abtilitar acesso remoto MySql
+sudo ufw allow 3306 -> Abtilitar acesso remoto MySql
 sudo ufw enable -> Para habilitar o UFW
 ```
 
