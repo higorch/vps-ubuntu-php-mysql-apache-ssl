@@ -87,9 +87,7 @@ DROP USER 'username'@'host';
 
 ```
 GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
-
 FLUSH PRIVILEGES;
-
 EXIT;
 ```
 
@@ -97,9 +95,7 @@ EXIT;
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION; *permissões direcionadas para todos bancos*
-
 FLUSH PRIVILEGES;
-
 EXIT;
 ```
 
@@ -121,9 +117,7 @@ DROP USER 'username'@'host';
 
 ```
 GRANT ALL PRIVILEGES ON MYDBNAME.* TO 'USERNAME'@'localhost';
-
 FLUSH PRIVILEGES;
-
 EXIT;
 ```
 
@@ -131,9 +125,7 @@ EXIT;
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@%'localhost';
-
 FLUSH PRIVILEGES;
-
 EXIT;
 ```
 
@@ -141,13 +133,9 @@ EXIT;
 
 ```
 sudo mysql
-
 SELECT user,authentication_string,plugin,host FROM mysql.user;
-
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
-
 FLUSH PRIVILEGES;
-
 EXIT;
 ```
 
@@ -168,7 +156,11 @@ sudo service mysql status
 ```
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
-bind-address = 0.0.0.0
+bind-address = xxx.ip.xxx
+sudo /etc/init.d/mysql restart
+iptables -A INPUT -i enp1s0 -p tcp --destination-port 3306 -j ACCEPT
+sudo iptables-save
+sudo ip6tables-save
 ```
 
 > Reiniciar o MySql
