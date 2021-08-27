@@ -158,9 +158,6 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
 bind-address = xxx.ip.xxx
 sudo /etc/init.d/mysql restart
-iptables -A INPUT -i enp1s0 -p tcp --destination-port 3306 -j ACCEPT
-sudo iptables-save
-sudo ip6tables-save
 ```
 
 > Reiniciar o MySql
