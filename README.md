@@ -282,6 +282,11 @@ sudo touch site.com.br.conf
 sudo a2ensite site.com.br.conf --> Abilita
 sudo a2dissite site.com.br.conf --> Desabilita
 ```
+> Configurar arquivo de host local UBUNTU
+
+```
+sudo gedit /etc/hosts
+```
 
 > Apontando subdominio wildcard
 
