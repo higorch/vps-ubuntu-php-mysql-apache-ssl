@@ -59,7 +59,7 @@ sudo apt install php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd php8.0-mbstri
 
 ```
 sudo update-alternatives --config php --> Escolher versão do PHP
-sudo update-alternatives --set phar /usr/bin/phar5.6 --> Setar extenções do PHP adicionais instaladas
+sudo update-alternatives --set phar /usr/bin/phar8.0 --> Setar extenções do PHP adicionais instaladas
 ```
 
 ## Instalação do MySql
