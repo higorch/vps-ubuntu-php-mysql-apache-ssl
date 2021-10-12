@@ -52,7 +52,7 @@ sudo apt install -y php8.0
 ```
 
 ```
-sudo apt install php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd php8.0-mbstring php8.0-curl php8.0-zip php8.0-cli php8.0-fpm
+sudo apt install php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd php8.0-mbstring php8.0-curl php8.0-zip php8.0-cli php8.0-fpm php8.0-soap
 ```
 
 ## Versões do PHP
