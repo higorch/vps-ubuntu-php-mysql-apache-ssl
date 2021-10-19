@@ -131,7 +131,7 @@ EXIT;
 *Permissões direcionadas para todos bancos*
 
 ```
-GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@%'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
