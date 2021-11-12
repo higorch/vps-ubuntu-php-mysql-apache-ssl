@@ -206,7 +206,13 @@ Altere a propriedade do seu diretório remoto para o seu usuário. Por exemplo, 
 Usar quando o executar o scp e der *permission denied*
 
 ```
-sudo chown -R ubuntu:ubuntu "caminho para o seu diretório remoto"
+sudo chown -R ubuntu:ubuntu /var/www/html
+```
+
+> Permissão para o diretorio (user para instalação do WordPress)
+
+```
+sudo chown -R www-data /var/www/html
 ```
 
 > Executar dentro do projeto *Laravel*, para mudar grupo de usuário
