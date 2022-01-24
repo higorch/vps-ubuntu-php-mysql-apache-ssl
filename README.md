@@ -62,7 +62,7 @@ sudo update-alternatives --config php --> Escolher versão do PHP
 sudo update-alternatives --set phar /usr/bin/phar8.0 --> Setar extenções do PHP adicionais instaladas
 ```
 
-### Se a versão padrão do PHP no servidor UBUNTU for diferene da que quer usar execute
+### Se a versão padrão do PHP no servidor UBUNTU for diferente da que quer usar execute
 
 ```
 sudo a2dismod php7.2 <-- Exemplo da versão padrão
