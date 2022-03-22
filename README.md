@@ -362,3 +362,9 @@ Conteudo: sera retornado quando o comando for executado
         </VirtualHost>
 </IfModule>
 ```
+
+## Set remote url token github
+
+```
+git remote set-url origin https://<token>@github.com/<user>/<repository>.git
+```
