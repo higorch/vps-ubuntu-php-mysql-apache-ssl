@@ -225,18 +225,14 @@ sudo chown -R www-data /var/www/html
 > Executar dentro do projeto *Laravel*, para mudar grupo de usuário
 
 ```
-sudo chown -R ubuntu:www-data storage
-sudo chown -R ubuntu:www-data bootstrap
+sudo chown -R ubuntu:www-data storage bootstrap
 ```
 
 > Permissoes das pastas bootstrap e storage
 
 ```
-sudo chmod -R o+w storage/
-sudo chmod -R 775 storage/
-
-sudo chmod -R o+w bootstrap/
-sudo chmod -R 775 bootstrap/
+sudo chmod -R o+w storage/ bootstrap/ public/
+sudo chmod -R 775 storage/ bootstrap/ public/
 ```
 
 ## Atualizar arquivos no servidor via SCP
