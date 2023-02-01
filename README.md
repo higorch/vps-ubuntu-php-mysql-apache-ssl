@@ -228,10 +228,10 @@ sudo chown -R www-data /var/www/html
 sudo chown -R ubuntu:www-data storage bootstrap
 ```
 
-> Permissoes das pastas bootstrap e storage
+> Permissoes das pastas bootstrap, storage, public
 
 ```
-sudo chmod -R o+w storage/ bootstrap/ public/
+sudo chmod -R u+rw storage/ bootstrap/ public/
 sudo chmod -R 775 storage/ bootstrap/ public/
 ```
 
